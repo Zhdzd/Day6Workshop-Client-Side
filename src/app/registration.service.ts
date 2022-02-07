@@ -20,7 +20,8 @@ export class RegistrationService {
               .set('email', reg.email)
 
           return lastValueFrom(
-            this.http.post<ResponseMessage>(URL_POST_API_REGISTER, reg, {headers})
+            this.http.post<ResponseMessage>(URL_POST_API_REGISTER, params.toString(), {headers})
+            //this.http.post<ResponseMessage>(URL_POST_API_REGISTER, reg, {headers})
           )
     }
 }
